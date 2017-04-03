@@ -11,7 +11,7 @@ namespace SOLID
 
 			Console.WriteLine("Send email to my team");
 
-			EmailSender sender = new EmailSender();
+			EmailSender sender = new EmailSender(new NetworkLogger());
 			sender.SendEmail("r.irzaev@mobidev.biz", "dotnet@mobidev.biz",
 							 "it is all about SOLID", "just use it");
 

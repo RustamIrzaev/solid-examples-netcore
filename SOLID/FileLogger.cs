@@ -14,4 +14,20 @@ namespace SOLID
 			                            exception.ToString());
 		}
 	}
+
+	public class CloudLogger : ILogger
+	{
+		public void Log(Exception exception)
+		{
+			// save somewhere to Azure (or Amazon)
+		}
+	}
+
+	public class NetworkLogger : ILogger
+	{
+		public void Log(Exception exception)
+		{
+			// save somewhere in local network
+		}
+	}
 }
